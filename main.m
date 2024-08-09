@@ -12,3 +12,6 @@ disp(bidi_bubble_res);
 
 shell_res = shellSort(tab_to_sort);
 disp(shell_res);
+
+quick_res = quickSortAlgo(tab_to_sort, length(tab_to_sort), 1);
+disp(quick_res);
