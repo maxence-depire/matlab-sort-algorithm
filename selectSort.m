@@ -1,4 +1,4 @@
-function tab_sort = select_sort(tab)
+function tab_sort = selectSort(tab)
 
     j = 0;
     min = 0;
@@ -21,5 +21,4 @@ function tab_sort = select_sort(tab)
     end
 
     tab_sort = tab;
-
 end
