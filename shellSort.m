@@ -7,7 +7,7 @@ function tab_sort = shellSort(tab)
         pas = round(3*pas+1);
     end
 
-    while pas ~= 1
+    while pas ~= 2
         pas = round(pas/3);
         for i = pas+1:n
             valeur = tab(n);
