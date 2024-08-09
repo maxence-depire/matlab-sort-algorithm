@@ -6,3 +6,6 @@ disp(select_res);
 
 bubble_res = bubbleSort(tab_to_sort);
 disp(bubble_res);
+
+bidi_bubble_res = bubbleSortBidirectionnal(tab_to_sort);
+disp(bidi_bubble_res);
