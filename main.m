@@ -9,3 +9,6 @@ disp(bubble_res);
 
 bidi_bubble_res = bubbleSortBidirectionnal(tab_to_sort);
 disp(bidi_bubble_res);
+
+shell_res = shellSort(tab_to_sort);
+disp(shell_res);
