@@ -1,14 +1,14 @@
-function i = quickSortPartition(tab, gauche, droite)
+function [ i, tab_sort ] = quickSortPartition(tab, gauche, droite)
 
-    i = gauche;
-    j = droite;
+    i = droite;
+    j = gauche;
 
-    pivot = tab((gauche+droite)/2);
+    pivot = tab(round((gauche+droite)/2));
 
     while i < j
 
         while tab(i) < pivot
-            i = i+1;
+            i = i + 1;
         end
 
         while tab(j) > pivot
@@ -25,5 +25,6 @@ function i = quickSortPartition(tab, gauche, droite)
 
     end
 
-    
+    tab_sort = tab;
+
 end

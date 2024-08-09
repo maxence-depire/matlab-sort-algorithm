@@ -1,15 +1,25 @@
-function tab_sort = quickSortAlgo(tab, gauche, droite)
+function arr = quickSortAlgo(arr)
 
-    indice = quickSortPartition(tab, gauche, droite);
-    if gauche < indice
-        tab = quickSortAlgo(tab, gauche, indice);
+    if length(arr) <= 1
+        return
     end
 
-    if indice+1 < droite
-        tab = quickSortAlgo(tab, indice, droite);
+    pivot = arr(end);   
+    i = 1;
+
+    for j = 1:length(arr)-1
+        if arr(j) < pivot
+            temp = arr(i);
+            arr(i) = arr(j);
+            arr(j) = temp;
+            i = i + 1;
+        end
     end
 
-    tab_sort = tab;
-
+    temp = arr(i);
+    arr(i) = arr(end);
+    arr(end) = temp;
+    
+    arr(1:i-1) = quickSortAlgo(arr(1:i-1));
+    arr(i+1:end) = quickSortAlgo(arr(i+1:end));
 end
-
