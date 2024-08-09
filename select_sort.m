@@ -4,8 +4,6 @@ function tab_sort = select_sort(tab)
     min = 0;
     indice = 0;
 
-    tab_sort = zeros(length(tab));
-
     for i = 1:length(tab)-1
         min = tab(i);
         indice = i;
@@ -17,9 +15,11 @@ function tab_sort = select_sort(tab)
             end
         end
 
-        tab_sort(indice) = tab(i);
+        tab(indice) = tab(i);
         tab(i) = min;
 
     end
+
+    tab_sort = tab;
 
 end
